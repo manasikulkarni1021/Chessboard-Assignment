@@ -1,0 +1,33 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 320px;
+    height: 320px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* 64 child class present in container class */
+.child {
+    background-color: #fff;
+    flex-basis: 12.5%;
+    height: 12.5%;
+}
+
+.child:nth-child(-2n+8),
+.child:nth-child(8)~.child:nth-child(-2n+15),
+.child:nth-child(16)~.child:nth-child(-2n+24),
+.child:nth-child(24)~.child:nth-child(-2n+31),
+.child:nth-child(32)~.child:nth-child(-2n+40),
+.child:nth-child(40)~.child:nth-child(-2n+47),
+.child:nth-child(48)~.child:nth-child(-2n+56),
+.child:nth-child(56)~.child:nth-child(-2n+63) {
+    background-color: #000;
+}
